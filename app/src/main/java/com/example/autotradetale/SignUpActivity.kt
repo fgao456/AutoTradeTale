@@ -1,5 +1,7 @@
 package com.example.autotradetale
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -7,6 +9,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class SignUpActivity : AppCompatActivity() {
+
+    // Define a SharedPreferences object
+    private lateinit var sharedPreferences: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -19,6 +25,9 @@ class SignUpActivity : AppCompatActivity() {
         val confirmPasswordInput = findViewById<EditText>(R.id.editTextConfirmPassword)
         val buttonBack = findViewById<Button>(R.id.signUpBackButton)
         val buttonSignUp = findViewById<Button>(R.id.buttonSignUp)
+
+        // Initialize SharedPreferences with the same name in all activities that need user info
+        sharedPreferences = getSharedPreferences("UserInfoPreferences", Context.MODE_PRIVATE)
 
         // Set the onClickListener for the Back button
         buttonBack.setOnClickListener {
@@ -49,8 +58,13 @@ class SignUpActivity : AppCompatActivity() {
             // If all checks pass, show a success message
             Toast.makeText(this, "Sign Up Successful!", Toast.LENGTH_SHORT).show()
 
+            // store the user info in SharedPreference
+            val editor = sharedPreferences.edit()
+            editor.putString(email, "$password,$firstName,$lastName")
+            editor.apply()
+
             // Optionally finish the activity or transition to another screen
-            // finish() // Uncomment if you want to finish the activity
+            finish()
         }
     }
 }
