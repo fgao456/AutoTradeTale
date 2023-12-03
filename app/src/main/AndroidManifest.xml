@@ -32,6 +32,19 @@
             android:name=".SignUpActivity"
             android:exported="true">
         </activity>
+
+        <!-- Declaration of ForgotPassWordActivity -->
+        <activity
+            android:name=".ForgotPassWordActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- Declaration of HomeActivity -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
+        </activity>
+
     </application>
 
 </manifest>

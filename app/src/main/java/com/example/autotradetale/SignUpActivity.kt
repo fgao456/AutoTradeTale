@@ -17,7 +17,7 @@ class SignUpActivity : AppCompatActivity() {
         val emailInput = findViewById<EditText>(R.id.editTextEmail)
         val passwordInput = findViewById<EditText>(R.id.editTextPassword)
         val confirmPasswordInput = findViewById<EditText>(R.id.editTextConfirmPassword)
-        val buttonBack = findViewById<Button>(R.id.buttonBack)
+        val buttonBack = findViewById<Button>(R.id.signUpBackButton)
         val buttonSignUp = findViewById<Button>(R.id.buttonSignUp)
 
         // Set the onClickListener for the Back button

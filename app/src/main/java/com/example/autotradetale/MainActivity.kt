@@ -54,5 +54,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ForgotPassWordActivity::class.java)
             startActivity(intent)
         }
+
+        val signInButton = findViewById<Button>(R.id.signInButton)
+        signInButton.setOnClickListener {
+            // Start the HomeActivity when the signIn button is clicked
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
