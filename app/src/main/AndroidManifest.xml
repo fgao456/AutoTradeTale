@@ -32,7 +32,7 @@
             android:name=".SignUpActivity"
             android:exported="true">
         </activity>
-
+      
         <!-- Declaration of ForgotPassWordActivity -->
         <activity
             android:name=".ForgotPassWordActivity"
