@@ -1,46 +1,13 @@
-////package com.example.autotradetale
-////
-////import androidx.appcompat.app.AppCompatActivity
-////import android.os.Bundle
-////
-////class MainActivity : AppCompatActivity() {
-////    override fun onCreate(savedInstanceState: Bundle?) {
-////        super.onCreate(savedInstanceState)
-////        setContentView(R.layout.activity_main)
-////    }
-////}
-//
-//package com.example.autotradetale
-//
-//import android.content.Intent
-//import android.os.Bundle
-//import android.widget.Button
-//import androidx.appcompat.app.AppCompatActivity
-//
-//class MainActivity : AppCompatActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-//
-//        // Assuming you have a button with the ID signUpButton in your activity_main.xml
-//        findViewById<Button>(R.id.signUpButton).setOnClickListener {
-//            // Start the SignUpActivity when the sign-up button is clicked
-//            startActivity(Intent(this, SignUpActivity::class.java))
-//        }
-//    }
-//}
 package com.example.autotradetale
 
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.textfield.TextInputEditText
 
 
 class MainActivity : AppCompatActivity() {
@@ -68,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         val forgotPasswordButton = findViewById<Button>(R.id.forgotPasswordButton)
         forgotPasswordButton.setOnClickListener {
             // Start the forgotPasswordActivity when the forgotPassword button is clicked
-            val intent = Intent(this, ForgetPasswordActivity::class.java)
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
 
@@ -83,6 +50,11 @@ class MainActivity : AppCompatActivity() {
                 val infos = userInfo?.split(",")
                 if (infos != null) {
                     if(infos.isNotEmpty() && infos[0] == password) {
+                        //save the email of current user, will use the email to show in profile page
+                        val editor = sharedPreferences.edit()
+                        editor.putString("CurrentUserEmailKey", email)
+                        editor.apply()
+
                         // Start the HomeActivity when the signIn button is clicked
                         val intent = Intent(this, HomeActivity::class.java)
                         startActivity(intent)

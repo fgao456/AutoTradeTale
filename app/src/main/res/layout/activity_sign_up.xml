@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back"
-            android:textColor="#03A9F4"
+            android:textColor="@color/black"
             android:background="?attr/selectableItemBackground"
             android:layout_marginBottom="16dp"/>
 

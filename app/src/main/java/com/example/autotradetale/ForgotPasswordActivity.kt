@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
-class ForgotPassWordActivity : AppCompatActivity() {
+class ForgotPasswordActivity : AppCompatActivity() {
 
     // Define a SharedPreferences object
     private lateinit var sharedPreferences: SharedPreferences

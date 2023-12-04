@@ -11,16 +11,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.80"
+        app:layout_constraintGuide_percent="0.65"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/TopGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/inputsBottomGuideLine"
@@ -31,18 +30,18 @@
 
     <ImageButton
         android:id="@+id/profileButton"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@drawable/user"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/TopGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/filterButton"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/filterButton"
-        android:layout_width="49dp"
-        android:layout_height="26dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/grey"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
@@ -50,6 +49,7 @@
         android:paddingBottom="0dp"
         android:text="Filter"
         android:textColor="#716E6E"
+        android:textSize="22dp"
         app:layout_constraintBottom_toTopOf="@+id/TopGuideline"
         app:layout_constraintEnd_toStartOf="@+id/profileButton"
         app:layout_constraintStart_toStartOf="@+id/rightGuideline"
