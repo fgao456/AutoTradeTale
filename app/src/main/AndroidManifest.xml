@@ -33,15 +33,27 @@
             android:exported="true">
         </activity>
       
-        <!-- Declaration of ForgotPassWordActivity -->
+        <!-- Declaration of ForgotPasswordActivity -->
         <activity
-            android:name=".ForgotPassWordActivity"
+            android:name=".ForgotPasswordActivity"
             android:exported="true">
         </activity>
 
         <!-- Declaration of HomeActivity -->
         <activity
             android:name=".HomeActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- Declaration of FilterActivity -->
+        <activity
+            android:name=".FilterActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- Declaration of ProfileActivity -->
+        <activity
+            android:name=".ProfileActivity"
             android:exported="true">
         </activity>
 

@@ -1,6 +1,9 @@
 package com.example.autotradetale
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,5 +26,21 @@ class HomeActivity : AppCompatActivity() {
         val adapter = RecyclerViewAdapter(itemDataList)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
+
+        val buttonFilter = findViewById<Button>(R.id.filterButton)
+        // Set the onClickListener for the Back button
+        buttonFilter.setOnClickListener {
+            // Switch to Filter page
+            val intent = Intent(this, FilterActivity::class.java)
+            startActivity(intent)
+        }
+
+        val buttonProfile = findViewById<ImageButton>(R.id.profileButton)
+        // Set the onClickListener for the Back button
+        buttonProfile.setOnClickListener {
+            // Switch to Filter page
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

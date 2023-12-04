@@ -5,14 +5,13 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
+    <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
+        android:textColor="@color/black"
         android:textSize="18sp"
-        android:textColor="?android:attr/colorPrimary"
-        android:drawableStart="@drawable/ic_arrow_back"
         android:drawablePadding="8dp"
         android:padding="8dp"
         android:background="?attr/selectableItemBackground"
@@ -25,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Make"
+        android:textColor="@color/black"
         android:paddingBottom="4dp" />
 
     <Spinner
@@ -36,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Model"
+        android:textColor="@color/black"
         android:paddingBottom="4dp" />
 
     <Spinner
@@ -47,6 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Year"
+        android:textColor="@color/black"
         android:paddingBottom="4dp" />
 
     <Spinner
@@ -58,6 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Condition"
+        android:textColor="@color/black"
         android:paddingBottom="4dp" />
 
     <LinearLayout
@@ -83,6 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mileage"
+        android:textColor="@color/black"
         android:paddingBottom="4dp" />
 
     <Spinner
@@ -94,9 +98,9 @@
         android:id="@+id/searchButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/button_color"
+        android:backgroundTint="@color/blue"
         android:text="Search"
         android:textColor="@android:color/white"
-        android:marginTop="16dp"/>
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>

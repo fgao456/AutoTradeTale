@@ -5,34 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/lastNameText"
-        android:layout_width="95dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="108dp"
-        android:text="TextView"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/profileButton2"
-        android:layout_width="70dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/user"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profilePageBackButton"
-        tools:ignore="SpeakableTextPresentCheck" />
-
     <Button
         android:id="@+id/logOutButton"
         android:layout_width="93dp"
         android:layout_height="30dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="40dp"
         android:backgroundTint="@color/grey"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
@@ -40,7 +16,10 @@
         android:paddingBottom="0dp"
         android:text="Logout"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toTopOf="@+id/imageTopGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -48,8 +27,6 @@
         android:id="@+id/profilePageBackButton"
         android:layout_width="93dp"
         android:layout_height="30dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
         android:backgroundTint="@color/grey"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
@@ -57,125 +34,116 @@
         android:paddingBottom="0dp"
         android:text="Back"
         android:textColor="@color/black"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintBottom_toTopOf="@+id/imageTopGuideline"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
-    <Button
-        android:id="@+id/homeNavButton"
-        android:layout_width="93dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="584dp"
-        android:backgroundTint="@color/grey"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="Home"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/imageTopGuideline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/profileNavButton"
-        android:layout_width="93dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="316dp"
-        android:layout_marginTop="584dp"
-        android:backgroundTint="@color/grey"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="Profile"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/imageTopGuideline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/homeNavButton2"
-        android:layout_width="93dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="584dp"
-        android:backgroundTint="@color/grey"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="Vehicles"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/imageTopGuideline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/searchNavButton"
-        android:layout_width="93dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="216dp"
-        android:layout_marginTop="584dp"
-        android:backgroundTint="@color/grey"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="Search"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/imageTopGuideline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+    <ImageButton
+        android:id="@+id/profileImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/user"
+        app:layout_constraintBottom_toTopOf="@+id/imageBottomGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/fullNameText"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintTop_toTopOf="@+id/imageTopGuideline"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/firstNameText"
-        android:layout_width="95dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="208dp"
-        android:text="TextView"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/fullNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/profileImage"
+        app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+        app:layout_constraintBottom_toTopOf="@+id/imageBottomGuideline"
+        app:layout_constraintTop_toTopOf="@+id/imageTopGuideline" />
+
+    <TextView
+        android:id="@+id/textAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="About"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileButton2" />
+        android:textColor="@color/black"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintBottom_toTopOf="@+id/signInBottomGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintTop_toTopOf="@+id/imageBottomGuideline" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="64dp"
-        android:text="Email"
+        android:paddingLeft="20dp"
+        android:text="Email :"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAreaTopGuideLine"
+        app:layout_constraintStart_toEndOf="@+id/leftGuideline"
+        app:layout_constraintTop_toTopOf="@+id/signInBottomGuideline" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/emailContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="176dp"
         android:text="TextView"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/firstNameText" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAreaTopGuideLine"
+        app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+        app:layout_constraintStart_toEndOf="@+id/textViewEmail"
+        app:layout_constraintTop_toTopOf="@+id/signInBottomGuideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imageTopGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imageBottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/signInBottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.53" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/buttonAreaTopGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.63" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
