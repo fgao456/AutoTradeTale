@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_forgetpassword)
 
-            val backTextView = findViewById<TextView>(R.id.backTextView)
+            val backButton = findViewById<TextView>(R.id.forgotPasswordBackButton)
 
             val email = findViewById<EditText>(R.id.inputEmail)
 
@@ -27,10 +27,9 @@ import androidx.appcompat.app.AppCompatActivity
 
             email.setText(emailAddress)
 
-            backTextView.setOnClickListener{
+            backButton.setOnClickListener{
                 // Redirect to the Sign Up Page after the button is clicked
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+                finish()
             }
         }
     }
